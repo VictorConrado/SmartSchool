@@ -1,0 +1,116 @@
+# .gitignore for .NET / Visual Studio projects
+
+# Build Folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+project.lock.json
+*.nupkg
+
+# Publish
+publish/
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+_ReSharper*/
+
+# User-specific files
+*.user
+*.userprefs
+*.csproj.user
+
+# IIS Express
+/.vs/**/*.db
+/.vs/**/*.v11.suo
+
+# Dotnet Tools
+.dotnet/
+
+# Entity Framework
+Migrations/*
+!Migrations/*.resx
+
+# Local settings
+appsettings*.Local.json
+secrets.json
+
+# Rider
+.idea/
+*.sln.iml
+
+# Coverage
+*.coverage
+*.coveragexml
+coverage/**
+
+# Generated files
+*.g.cs
+*.designer.cs
+*_i.c
+*_p.c
+*_i.h
+*_p.h
+
+# Node modules (if present in solution)
+node_modules/
+
+# Yarn
+yarn-error.log
+
+# Optional: include package lock files if you want them tracked
+# package-lock.json
+# yarn.lock
+
+# JetBrains Rider
+/.idea/
+
+# Azure Pipelines
+.vscode/tasks.json
+
+# Misc
+*.vsix
+
+# Ignore environment-specific files
+.env
+.env.*
+
+# dotnet tool manifest
+.tools/**
+
+# Ignore local database files
+*.mdf
+*.ldf
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# End of file
