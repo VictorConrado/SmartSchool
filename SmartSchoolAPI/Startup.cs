@@ -3,7 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SmartSchoolAPI.Data;
+using SmartSchoolAPI.Data.Contexts;
+using SmartSchoolAPI.Data.Repositories;
 
 namespace SmartSchoolAPI
 {
@@ -19,20 +20,21 @@ namespace SmartSchoolAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+          
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
-            services.AddDbContext<SmartContext>(
-                context => context.UseSqlite(Configuration.GetConnectionString("default"))
-                );
 
-            // Configure DbContext
-            var connectionString = Configuration.GetConnectionString("SmartSchoolAPIContext");
-            if (!string.IsNullOrEmpty(connectionString))
+            services.AddDbContext<SmartContext>(context => context.UseSqlite(Configuration.GetConnectionString("default")));
+            services.AddScoped<IAlunoRepository, AlunoRepository>();
+            services.AddScoped<IProfessorRepository, ProfessorRepository>();
+            services.AddScoped<IRepository, Repository>();
+
+            services.AddControllers().AddNewtonsoftJson(options =>
             {
-                services.AddDbContext<SmartContext>(options =>
-                    options.UseSqlServer(connectionString));
-            }
+                options.SerializerSettings.ReferenceLoopHandling =
+                    Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

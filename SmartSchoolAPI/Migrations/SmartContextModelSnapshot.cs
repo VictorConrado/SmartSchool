@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SmartSchoolAPI.Data;
+using SmartSchoolAPI.Data.Contexts;
 
 #nullable disable
 

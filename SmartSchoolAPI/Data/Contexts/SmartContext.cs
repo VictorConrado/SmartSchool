@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartSchoolAPI.Models;
 
-namespace SmartSchoolAPI.Data
+namespace SmartSchoolAPI.Data.Contexts
 {
     public class SmartContext : DbContext
     {
