@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartSchoolAPI.Data.Contexts;
+using SmartSchoolAPI.Data.Repositories.Interfaces;
 using SmartSchoolAPI.Models;
 
-namespace SmartSchoolAPI.Data.Repositories
+namespace SmartSchoolAPI.Data.Repositories.Implementatios
 {
     public class Repository : IRepository
     {

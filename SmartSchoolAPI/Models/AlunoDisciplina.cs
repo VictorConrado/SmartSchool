@@ -8,6 +8,10 @@
             AlunoId = alunoId;
             DisciplinaId = disciplinaId;
         }
+
+        public DateTime DataInicio { get; set; }
+        public DateTime? DataFim { get; set; }
+        public int? Nota { get; set; }
         public int AlunoId { get; set; }
         public Aluno Aluno { get; set; }
         public int DisciplinaId { get; set; }

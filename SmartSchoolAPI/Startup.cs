@@ -1,10 +1,12 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SmartSchoolAPI.Data.Contexts;
-using SmartSchoolAPI.Data.Repositories;
+using SmartSchoolAPI.Data.Repositories.Implementatios;
+using SmartSchoolAPI.Data.Repositories.Interfaces;
 
 namespace SmartSchoolAPI
 {
@@ -34,6 +36,8 @@ namespace SmartSchoolAPI
                 options.SerializerSettings.ReferenceLoopHandling =
                     Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
         }
 

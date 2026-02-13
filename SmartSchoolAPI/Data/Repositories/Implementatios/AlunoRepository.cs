@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartSchoolAPI.Data.Contexts;
-using SmartSchoolAPI.Data.Repositories;
+using SmartSchoolAPI.Data.Repositories.Implementatios;
+using SmartSchoolAPI.Data.Repositories.Interfaces;
 using SmartSchoolAPI.Models;
 public class AlunoRepository : Repository, IAlunoRepository
 {

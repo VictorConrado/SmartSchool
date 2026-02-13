@@ -1,6 +1,6 @@
 ﻿using SmartSchoolAPI.Models;
 
-namespace SmartSchoolAPI.Data.Repositories
+namespace SmartSchoolAPI.Data.Repositories.Interfaces
 {
     public interface IRepository
     {

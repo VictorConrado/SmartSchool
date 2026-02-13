@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SmartSchoolAPI.Data.Contexts;
-using SmartSchoolAPI.Data.Repositories;
+using SmartSchoolAPI.Data.Repositories.Interfaces;
+using SmartSchoolAPI.DTO_s;
+using SmartSchoolAPI.DTO_s.AlunosDto;
 using SmartSchoolAPI.Models;
 
 namespace SmartSchoolAPI.Controllers
@@ -11,11 +14,16 @@ namespace SmartSchoolAPI.Controllers
     [ApiController]
     public class ProfessorController : ControllerBase
     {
+
         private readonly IProfessorRepository _repo;
 
-        public ProfessorController(IProfessorRepository repo)
+        private readonly IMapper _mapper;
+
+        public ProfessorController(IProfessorRepository repo, IMapper mapper)
         {
+            _mapper = mapper;
             _repo = repo;
+            
         }
 
         // /api/professor
@@ -23,7 +31,7 @@ namespace SmartSchoolAPI.Controllers
         public IActionResult Get()
         {
             var result = _repo.GetAllProfessores(true);
-                return Ok(result);
+                return Ok(_mapper.Map<IEnumerable<ProfessoresDto>>(result));
         }
 
         // api/professor/byId
@@ -33,47 +41,56 @@ namespace SmartSchoolAPI.Controllers
 
             var professor = _repo.GetProfessorById(id, false);
             if (professor == null) return BadRequest("O professor não foi encontrado");
-            return Ok(professor);
+
+            var professorDto = _mapper.Map<ProfessoresDto>(professor);
+            return Ok(professorDto);
         }
 
 
         // /api/professor
         [HttpPost]
-        public IActionResult Post(Professor professor)
+        public IActionResult Post(ProfessoresRegistrarDto model)
         {
+            var professor = _mapper.Map<Professor>(model);
+
             _repo.Update(professor);
             if (_repo.SaveChanges())
             {
-                return Ok(professor);
+                return Created($"/api/professor/{model.Id}", _mapper.Map<ProfessoresDto>(professor));
             }
             return BadRequest("Professor não cadastrado");
         }
 
         // /api/Professors/id
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Professor professor)
-        {
-            var putProfessor = _repo.GetProfessorById(id, false);
-
-            _repo.Update(professor);
-            if (_repo.SaveChanges())
-            {
-                return Ok(professor);
-            }
-            return BadRequest("Professor não cadastrado");
-        }
-
-        // /api/professor/id
-        [HttpPatch("{id}")]
-        public IActionResult Patch(int id, Professor professor)
+        public IActionResult Put(int id, ProfessoresRegistrarDto model)
         {
             var putProfessor = _repo.GetProfessorById(id, false);
             if (putProfessor == null) return BadRequest("Professor não encontrado");
 
-            _repo.Update(professor);
+            _mapper.Map(model, putProfessor);
+
+            _repo.Update(putProfessor);
             if (_repo.SaveChanges())
             {
-                return Ok(professor);
+                return Created($"/api/professor/{model.Id}", _mapper.Map<ProfessoresDto>(putProfessor));
+            }
+            return BadRequest("Professor não atualizado");
+        }
+
+        // /api/professor/id
+        [HttpPatch("{id}")]
+        public IActionResult Patch(int id, ProfessoresRegistrarDto model)
+        {
+            var patchProfessor = _repo.GetProfessorById(id, false);
+            if (patchProfessor == null) return BadRequest("Professor não encontrado");
+
+            _mapper.Map(model, patchProfessor);
+
+            _repo.Update(patchProfessor);
+            if (_repo.SaveChanges())
+            {
+                return Created($"/api/professor/{model.Id}", _mapper.Map<ProfessoresDto>(patchProfessor));
             }
             return BadRequest("Professor não atualizado");
         }
