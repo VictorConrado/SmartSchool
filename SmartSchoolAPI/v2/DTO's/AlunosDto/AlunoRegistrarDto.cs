@@ -1,5 +1,5 @@
 ﻿
-namespace SmartSchoolAPI.DTO_s.AlunosDto
+namespace SmartSchoolAPI.v2.DTO_s.AlunosDto
 {
     public class AlunoRegistrarDto
     {

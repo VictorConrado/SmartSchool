@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Hosting;
 using SmartSchoolAPI;
 
@@ -9,6 +10,8 @@ startup.ConfigureServices(builder.Services);
 
 var app = builder.Build();
 
-startup.Configure(app, app.Environment);
+var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
+startup.Configure(app, app.Environment, provider);
 
 app.Run();
