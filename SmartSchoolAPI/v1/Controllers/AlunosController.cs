@@ -6,6 +6,7 @@ using SmartSchoolAPI.Data.Repositories.Interfaces;
 using SmartSchoolAPI.v1.DTO_s;
 using SmartSchoolAPI.v1.DTO_s.AlunosDto;
 using SmartSchoolAPI.Models;
+using SmartSchoolAPI.Helpers;
 
 
 namespace SmartSchoolAPI.v1.Controllers
@@ -41,10 +42,17 @@ namespace SmartSchoolAPI.v1.Controllers
         /// </summary>
         /// <returns>Retorna Ok com a lista de AlunoDto.</returns>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get([FromQuery]PageParams pageParams)
         {
-            var result = _repo.GetAllAlunos(true);
-            return Ok(_mapper.Map<IEnumerable<AlunoDto>>(result));
+
+            var alunos = await _repo.GetAllAlunosAsync(pageParams, true);
+
+            var alunosResult = _mapper.Map<IEnumerable<AlunoDto>>(alunos);
+
+            Response.AddPagination(alunos.CurrentPage, alunos.PageSize, alunos.TotalCount, alunos.TotalPages);
+
+            return Ok(alunosResult);
+
         }
 
         /// <summary>
