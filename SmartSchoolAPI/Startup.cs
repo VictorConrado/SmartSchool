@@ -28,7 +28,8 @@ namespace SmartSchoolAPI
           
             services.AddEndpointsApiExplorer();
 
-            services.AddDbContext<SmartContext>(context => context.UseSqlite(Configuration.GetConnectionString("default")));
+            services.AddDbContext<SmartContext>(options => options.UseMySql(Configuration.GetConnectionString("MySqlConnection"), ServerVersion.AutoDetect(Configuration.GetConnectionString("MySqlConnection"))));
+
             services.AddScoped<IAlunoRepository, AlunoRepository>();
             services.AddScoped<IProfessorRepository, ProfessorRepository>();
             services.AddScoped<IRepository, Repository>();

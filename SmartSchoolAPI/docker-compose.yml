@@ -1,0 +1,43 @@
+volumes:
+  smartschooldb:
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: smartschool-mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: lalaland
+      MYSQL_DATABASE: SmartSchoolDB
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - smartschooldb:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-plalaland"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - smartschool-net
+
+  smartschool:
+    build: .
+    container_name: smartschool-api
+    restart: always
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "server=mysql;port=3306;database=SmartSchoolDB;user=root;password=lalaland"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - smartschool-net
+
+networks:
+  smartschool-net:
+    driver: bridge
