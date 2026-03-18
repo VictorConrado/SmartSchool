@@ -138,6 +138,61 @@ namespace SmartSchoolAPI.Migrations
                             Nome = "Paulo",
                             Sobrenome = "José",
                             Telefone = "9874512"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Ativo = true,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataNascimento = new DateTime(2006, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Matricula = 8,
+                            Nome = "Ana",
+                            Sobrenome = "Souza",
+                            Telefone = "11111111"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Ativo = true,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataNascimento = new DateTime(2006, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Matricula = 9,
+                            Nome = "Bruno",
+                            Sobrenome = "Lima",
+                            Telefone = "22222222"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Ativo = true,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataNascimento = new DateTime(2005, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Matricula = 10,
+                            Nome = "Carla",
+                            Sobrenome = "Mendes",
+                            Telefone = "33333333"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Ativo = true,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataNascimento = new DateTime(2004, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Matricula = 11,
+                            Nome = "Diego",
+                            Sobrenome = "Rocha",
+                            Telefone = "44444444"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Ativo = true,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataNascimento = new DateTime(2005, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Matricula = 12,
+                            Nome = "Eduarda",
+                            Sobrenome = "Alves",
+                            Telefone = "55555555"
                         });
                 });
 
@@ -186,7 +241,7 @@ namespace SmartSchoolAPI.Migrations
                         new
                         {
                             AlunoId = 1,
-                            DisciplinaId = 2,
+                            DisciplinaId = 1,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -198,13 +253,7 @@ namespace SmartSchoolAPI.Migrations
                         new
                         {
                             AlunoId = 1,
-                            DisciplinaId = 5,
-                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            AlunoId = 2,
-                            DisciplinaId = 1,
+                            DisciplinaId = 7,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -221,14 +270,8 @@ namespace SmartSchoolAPI.Migrations
                         },
                         new
                         {
-                            AlunoId = 3,
-                            DisciplinaId = 1,
-                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            AlunoId = 3,
-                            DisciplinaId = 2,
+                            AlunoId = 2,
+                            DisciplinaId = 8,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -239,6 +282,18 @@ namespace SmartSchoolAPI.Migrations
                         },
                         new
                         {
+                            AlunoId = 3,
+                            DisciplinaId = 6,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 3,
+                            DisciplinaId = 9,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
                             AlunoId = 4,
                             DisciplinaId = 1,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -246,13 +301,13 @@ namespace SmartSchoolAPI.Migrations
                         new
                         {
                             AlunoId = 4,
-                            DisciplinaId = 4,
+                            DisciplinaId = 10,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             AlunoId = 4,
-                            DisciplinaId = 5,
+                            DisciplinaId = 11,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -264,13 +319,13 @@ namespace SmartSchoolAPI.Migrations
                         new
                         {
                             AlunoId = 5,
-                            DisciplinaId = 5,
+                            DisciplinaId = 12,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            AlunoId = 6,
-                            DisciplinaId = 1,
+                            AlunoId = 5,
+                            DisciplinaId = 13,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -288,37 +343,85 @@ namespace SmartSchoolAPI.Migrations
                         new
                         {
                             AlunoId = 6,
-                            DisciplinaId = 4,
-                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            AlunoId = 7,
-                            DisciplinaId = 1,
-                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            AlunoId = 7,
-                            DisciplinaId = 2,
-                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            AlunoId = 7,
-                            DisciplinaId = 3,
-                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            AlunoId = 7,
-                            DisciplinaId = 4,
+                            DisciplinaId = 14,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             AlunoId = 7,
                             DisciplinaId = 5,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 7,
+                            DisciplinaId = 6,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 7,
+                            DisciplinaId = 15,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 8,
+                            DisciplinaId = 7,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 8,
+                            DisciplinaId = 8,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 9,
+                            DisciplinaId = 9,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 9,
+                            DisciplinaId = 10,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 10,
+                            DisciplinaId = 11,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 10,
+                            DisciplinaId = 12,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 11,
+                            DisciplinaId = 13,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 11,
+                            DisciplinaId = 14,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 12,
+                            DisciplinaId = 1,
+                            DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            AlunoId = 12,
+                            DisciplinaId = 15,
                             DataInicio = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -404,73 +507,113 @@ namespace SmartSchoolAPI.Migrations
                         {
                             Id = 2,
                             CargaHoraria = 0,
-                            CursoId = 3,
-                            Nome = "Matemática",
-                            ProfessorId = 1
+                            CursoId = 2,
+                            Nome = "Física",
+                            ProfessorId = 2
                         },
                         new
                         {
                             Id = 3,
                             CargaHoraria = 0,
                             CursoId = 3,
-                            Nome = "Física",
-                            ProfessorId = 2
+                            Nome = "Português",
+                            ProfessorId = 3
                         },
                         new
                         {
                             Id = 4,
                             CargaHoraria = 0,
                             CursoId = 1,
-                            Nome = "Português",
-                            ProfessorId = 3
+                            Nome = "Inglês",
+                            ProfessorId = 4
                         },
                         new
                         {
                             Id = 5,
                             CargaHoraria = 0,
-                            CursoId = 1,
-                            Nome = "Inglês",
-                            ProfessorId = 4
+                            CursoId = 2,
+                            Nome = "Programação",
+                            ProfessorId = 5
                         },
                         new
                         {
                             Id = 6,
                             CargaHoraria = 0,
-                            CursoId = 2,
-                            Nome = "Inglês",
-                            ProfessorId = 4
+                            CursoId = 3,
+                            Nome = "Banco de Dados",
+                            ProfessorId = 6
                         },
                         new
                         {
                             Id = 7,
                             CargaHoraria = 0,
-                            CursoId = 3,
-                            Nome = "Inglês",
-                            ProfessorId = 4
+                            CursoId = 1,
+                            Nome = "Algoritmos",
+                            ProfessorId = 7
                         },
                         new
                         {
                             Id = 8,
                             CargaHoraria = 0,
-                            CursoId = 1,
-                            Nome = "Programação",
-                            ProfessorId = 5
+                            CursoId = 2,
+                            Nome = "Estrutura de Dados",
+                            ProfessorId = 8
                         },
                         new
                         {
                             Id = 9,
                             CargaHoraria = 0,
-                            CursoId = 2,
-                            Nome = "Programação",
-                            ProfessorId = 5
+                            CursoId = 3,
+                            Nome = "Redes",
+                            ProfessorId = 1
                         },
                         new
                         {
                             Id = 10,
                             CargaHoraria = 0,
+                            CursoId = 1,
+                            Nome = "Sistemas Operacionais",
+                            ProfessorId = 2
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CargaHoraria = 0,
+                            CursoId = 2,
+                            Nome = "Engenharia de Software",
+                            ProfessorId = 3
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CargaHoraria = 0,
                             CursoId = 3,
-                            Nome = "Programação",
+                            Nome = "Segurança da Informação",
+                            ProfessorId = 4
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CargaHoraria = 0,
+                            CursoId = 1,
+                            Nome = "Inteligência Artificial",
                             ProfessorId = 5
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CargaHoraria = 0,
+                            CursoId = 2,
+                            Nome = "Desenvolvimento Web",
+                            ProfessorId = 6
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CargaHoraria = 0,
+                            CursoId = 3,
+                            Nome = "Mobile",
+                            ProfessorId = 7
                         });
                 });
 
@@ -560,6 +703,36 @@ namespace SmartSchoolAPI.Migrations
                             Registro = 5,
                             Sobrenome = "Montanha",
                             Telefone = "11999990005"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Ativo = true,
+                            DataInicio = new DateTime(2021, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nome = "Fernanda",
+                            Registro = 6,
+                            Sobrenome = "Silva",
+                            Telefone = "11999990006"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Ativo = true,
+                            DataInicio = new DateTime(2021, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nome = "Carlos",
+                            Registro = 7,
+                            Sobrenome = "Pereira",
+                            Telefone = "11999990007"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Ativo = true,
+                            DataInicio = new DateTime(2022, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nome = "Juliana",
+                            Registro = 8,
+                            Sobrenome = "Costa",
+                            Telefone = "11999990008"
                         });
                 });
 

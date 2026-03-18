@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SmartSchoolAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMySql : Migration
+    public partial class UpdateSeedData : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -180,7 +180,12 @@ namespace SmartSchoolAPI.Migrations
                     { 4, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), 4, "Luiza", "Maria", "6565659" },
                     { 5, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), 5, "Lucas", "Machado", "565685415" },
                     { 6, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), 6, "Pedro", "Alvares", "456454545" },
-                    { 7, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), 7, "Paulo", "José", "9874512" }
+                    { 7, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), 7, "Paulo", "José", "9874512" },
+                    { 8, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2006, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), 8, "Ana", "Souza", "11111111" },
+                    { 9, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2006, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), 9, "Bruno", "Lima", "22222222" },
+                    { 10, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2005, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), 10, "Carla", "Mendes", "33333333" },
+                    { 11, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2004, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), 11, "Diego", "Rocha", "44444444" },
+                    { 12, true, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2005, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 12, "Eduarda", "Alves", "55555555" }
                 });
 
             migrationBuilder.InsertData(
@@ -202,7 +207,10 @@ namespace SmartSchoolAPI.Migrations
                     { 2, true, null, new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Roberto", 2, "Soares", "11999990002" },
                     { 3, true, null, new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Ronaldo", 3, "Marconi", "11999990003" },
                     { 4, true, null, new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Rodrigo", 4, "Carvalho", "11999990004" },
-                    { 5, true, null, new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Alexandre", 5, "Montanha", "11999990005" }
+                    { 5, true, null, new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Alexandre", 5, "Montanha", "11999990005" },
+                    { 6, true, null, new DateTime(2021, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Fernanda", 6, "Silva", "11999990006" },
+                    { 7, true, null, new DateTime(2021, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Carlos", 7, "Pereira", "11999990007" },
+                    { 8, true, null, new DateTime(2022, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Juliana", 8, "Costa", "11999990008" }
                 });
 
             migrationBuilder.InsertData(
@@ -211,15 +219,20 @@ namespace SmartSchoolAPI.Migrations
                 values: new object[,]
                 {
                     { 1, 0, 1, "Matemática", null, 1 },
-                    { 2, 0, 3, "Matemática", null, 1 },
-                    { 3, 0, 3, "Física", null, 2 },
-                    { 4, 0, 1, "Português", null, 3 },
-                    { 5, 0, 1, "Inglês", null, 4 },
-                    { 6, 0, 2, "Inglês", null, 4 },
-                    { 7, 0, 3, "Inglês", null, 4 },
-                    { 8, 0, 1, "Programação", null, 5 },
-                    { 9, 0, 2, "Programação", null, 5 },
-                    { 10, 0, 3, "Programação", null, 5 }
+                    { 2, 0, 2, "Física", null, 2 },
+                    { 3, 0, 3, "Português", null, 3 },
+                    { 4, 0, 1, "Inglês", null, 4 },
+                    { 5, 0, 2, "Programação", null, 5 },
+                    { 6, 0, 3, "Banco de Dados", null, 6 },
+                    { 7, 0, 1, "Algoritmos", null, 7 },
+                    { 8, 0, 2, "Estrutura de Dados", null, 8 },
+                    { 9, 0, 3, "Redes", null, 1 },
+                    { 10, 0, 1, "Sistemas Operacionais", null, 2 },
+                    { 11, 0, 2, "Engenharia de Software", null, 3 },
+                    { 12, 0, 3, "Segurança da Informação", null, 4 },
+                    { 13, 0, 1, "Inteligência Artificial", null, 5 },
+                    { 14, 0, 2, "Desenvolvimento Web", null, 6 },
+                    { 15, 0, 3, "Mobile", null, 7 }
                 });
 
             migrationBuilder.InsertData(
@@ -227,29 +240,37 @@ namespace SmartSchoolAPI.Migrations
                 columns: new[] { "AlunoId", "DisciplinaId", "DataFim", "DataInicio", "Nota" },
                 values: new object[,]
                 {
-                    { 1, 2, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 1, 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
                     { 1, 4, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 1, 5, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 2, 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 1, 7, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
                     { 2, 2, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
                     { 2, 5, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 3, 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 3, 2, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 2, 8, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
                     { 3, 3, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 3, 6, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 3, 9, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
                     { 4, 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 4, 4, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 4, 5, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 4, 10, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 4, 11, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
                     { 5, 4, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 5, 5, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 6, 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 5, 12, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 5, 13, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
                     { 6, 2, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
                     { 6, 3, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 6, 4, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 7, 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 7, 2, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 7, 3, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 7, 4, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 7, 5, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null }
+                    { 6, 14, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 7, 5, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 7, 6, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 7, 15, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 8, 7, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 8, 8, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 9, 9, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 9, 10, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 10, 11, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 10, 12, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 11, 13, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 11, 14, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 12, 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
+                    { 12, 15, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null }
                 });
 
             migrationBuilder.CreateIndex(

@@ -39,6 +39,24 @@ public class AlunoRepository : Repository, IAlunoRepository
         return await PageList<Aluno>.CreateAsync(query, pageParams.PageNumber, pageParams.PageSize);
     }
 
+    public async Task<Aluno[]> GetAllAlunosByDisciplinaIdAsync(int disciplinaId, bool includeProfessor = false)
+    {
+        IQueryable<Aluno> query = _context.Alunos;
+
+        if (includeProfessor)
+        {
+            query = query.Include(a => a.AlunosDisciplinas)
+                         .ThenInclude(ad => ad.Disciplina)
+                         .ThenInclude(d => d.Professor);
+        }
+
+        query = query.AsNoTracking()
+                     .OrderBy(a => a.Id)
+                     .Where(aluno => aluno.AlunosDisciplinas.Any(ad => ad.DisciplinaId == disciplinaId));
+
+        return await query.ToArrayAsync();
+    }
+
     public Aluno[] GetAllAlunos(bool includeProfessor = false)
     {
         IQueryable<Aluno> query = _context.Alunos;

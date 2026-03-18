@@ -7,5 +7,6 @@ namespace SmartSchoolAPI.Data.Repositories.Interfaces
         Professor[] GetAllProfessores(bool includeAlunos);
         Professor[] GetByDisciplinas(int disciplinaId, bool includeAlunos);
         Professor GetProfessorById(int professorId, bool includeAlunos);
+        Professor[] GetProfessorByAlunoId(int alunoId, bool includeAlunos);
     }
 }

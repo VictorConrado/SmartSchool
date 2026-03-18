@@ -13,5 +13,6 @@ namespace SmartSchoolAPI.v1.DTO_s
         public DateTime DataInicio { get; set; }
         public DateTime? DataFim { get; set; }
         public bool Ativo { get; set; } = true;
+        public IEnumerable<DisciplinaDto> Disciplinas { get; set; }
     }
 }

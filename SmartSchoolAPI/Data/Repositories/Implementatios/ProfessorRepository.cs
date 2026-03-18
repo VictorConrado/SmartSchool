@@ -63,5 +63,26 @@ namespace SmartSchoolAPI.Data.Repositories.Implementatios
                 .AsNoTracking()
                 .FirstOrDefault(p => p.Id == professorId);
         }
+
+        public Professor[] GetProfessorByAlunoId(int alunoId, bool includeProfessor = false)
+        {
+            IQueryable<Professor> query = _context.Professores;
+
+            if (includeProfessor)
+            {
+                query = query
+                    .Include(p => p.Disciplinas)
+                    .ThenInclude(d => d.AlunosDisciplinas)
+                    .ThenInclude(ad => ad.Aluno);
+            }
+
+            query = query
+                .AsNoTracking()
+                .OrderBy(p => p.Id)
+                .Where(p => p.Disciplinas.Any(
+                    d => d.AlunosDisciplinas.Any(ad => ad.AlunoId == alunoId)));
+
+            return query.ToArray();
+        }
     }
 }
